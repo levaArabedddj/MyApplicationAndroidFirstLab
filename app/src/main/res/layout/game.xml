@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+    <TextView
+            android:id="@+id/wordTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/inputEditText"
+            app:layout_constraintStart_toStartOf="@+id/inputEditText"
+            app:layout_constraintEnd_toEndOf="@+id/inputEditText"
+            app:layout_constraintBottom_toBottomOf="@+id/inputEditText"
+            app:layout_constraintHorizontal_bias="0.211" app:layout_constraintVertical_bias="0.358"/>
+    <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Введіть слово"
+            app:layout_constraintTop_toBottomOf="@id/wordTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="text"/>
+
+    <Button
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Перевірити"
+            app:layout_constraintTop_toBottomOf="@+id/inputEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.122"
+            app:layout_constraintHorizontal_bias="0.501"/>
+    <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="251dp"
+            android:layout_height="122dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintTop_toBottomOf="@id/checkButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.25"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
